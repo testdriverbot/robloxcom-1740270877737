@@ -1,0 +1,19 @@
+version: 4.2.12
+session: 67ba6f6ac0f43b48770fa485
+steps:
+  - prompt: Focus the browser window.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+  - prompt: Click on the "Log In" button.
+    commands:
+      - command: hover-text
+        text: Log In
+        description: log in button in the top right corner of the browser
+        action: click
+  - prompt: >-
+      Assert that the user is redirected to the login page.  # Use the content
+      of the file from the environment
+    commands:
+      - command: assert
+        expect: the page contains "Login to Roblox"
