@@ -1,0 +1,31 @@
+version: 4.2.12
+session: 67ba6f6bc0f43b48770fa487
+steps:
+  - prompt: >-
+      Fill in the sign-up form with invalid data  # Use the content of the file
+      from the environment
+    commands:
+      - command: hover-text
+        text: Month
+        description: month dropdown in the sign-up form
+        action: click
+      - command: type
+        text: InvalidMonth
+      - command: hover-text
+        text: Day
+        description: day dropdown in the sign-up form
+        action: click
+      - command: type
+        text: 32
+      - command: hover-text
+        text: Year
+        description: year dropdown in the sign-up form
+        action: click
+      - command: type
+        text: 1899
+      - command: hover-text
+        text: At least 8 characters
+        description: password input in the sign-up form
+        action: click
+      - command: type
+        text: 123
